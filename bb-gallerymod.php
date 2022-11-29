@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BB Gallery Mod
  * Plugin URI: https://github.com/jacobkdavis/bb-gallerymod
- * Description: Custom beaver builder module for a gallerymod card
+ * Description: Custom beaver builder module for a modified gallery full-width card
  * Version: 1.0.0
  * Author: Jacob Davis
  * Author URI: http://jacobkdavis.com
