@@ -4,7 +4,7 @@
 if ( $module->get_photos() ) :
 
 	?>
-	<div class="fl-post-<?php echo $module->get_layout_slug() . $paged; ?>"<?php echo FLPostGridModule::print_schema( ' itemscope="itemscope" itemtype="' . FLPostGridModule::schema_collection_type( $data_source, $post_type ) . '"' ); ?>>
+	<div class="fl-post-<?php echo $module->get_layout_slug() . $paged; ?>">
 	<?php
 
 
@@ -13,7 +13,7 @@ if ( $module->get_photos() ) :
 	
 		?>
 
-		<<?php echo $module->get_posts_container(); ?> <?php $module->render_post_class(); ?><?php FLPostGridModule::print_schema( ' itemscope itemtype="' . FLPostGridModule::schema_itemtype() . '"' ); ?>>
+		<div <?php $module->render_post_class(); ?>>
 		
 		<?php
 
@@ -82,7 +82,7 @@ if ( $module->get_photos() ) :
 		}
 		?>
 
-		</<?php echo $module->get_posts_container(); ?>>
+		</div>
 	
 	
 	<?php

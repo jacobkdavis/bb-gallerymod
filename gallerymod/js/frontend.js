@@ -8,6 +8,8 @@
 
 		this.wrapperClass = this.nodeClass + ' .fl-post-' + this.settings.layout;
 		this.postClass    = this.wrapperClass + '-post';
+		
+		this._initLayout();
 
 	};
 
@@ -21,12 +23,7 @@
 
 		_initLayout: function()
 		{
-			switch(this.settings.layout) {
-
-				case 'gallery':
-				this._galleryLayout();
-				break;
-			}
+			this._galleryLayout();
 
 			$(this.postClass).css('visibility', 'visible');
 
