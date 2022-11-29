@@ -338,151 +338,20 @@ FLBuilder::register_module('FLGalleryModModule', array(
 							'title' => __( 'Show Title Tag', 'fl-builder' ),
 						),
 					),
+					'link_photos'       => array(
+						'type'    => 'select',
+						'label'   => __( 'Link Photos', 'fl-builder' ),
+						'default' => '0',
+						'options' => array(
+							'lightbox' => __( 'Lightbox', 'fl-builder' ),
+							'none'     => __( 'None', 'fl-builder' ),
+						),
+					),
 				),
 			),
 			
 
 		),
 	),
-// 	'style'      => array(
-// 		'title'    => __( 'Style', 'fl-builder' ),
-// 		'sections' => array(
-// 			'post_style'      => array(
-// 				'title'  => __( 'Gallery Mod', 'fl-builder' ),
-// 				'fields' => array(
-// 					'post_align' => array(
-// 						'type'    => 'align',
-// 						'label'   => __( 'Post Alignment', 'fl-builder' ),
-// 						'default' => '',
-// 						'preview' => array(
-// 							'type'     => 'css',
-// 							'property' => 'text-align',
-// 							'selector' => '.fl-post-grid-post, .fl-post-feed-post',
-// 						),
-// 					),
-// 					'bg_color'   => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Post Background Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'     => 'css',
-// 							'selector' => '.fl-post-feed-post, .fl-post-grid-post',
-// 							'property' => 'background-color',
-// 						),
-// 					),
-// 					'border'     => array(
-// 						'type'       => 'border',
-// 						'label'      => __( 'Border', 'fl-builder' ),
-// 						'responsive' => true,
-// 						'preview'    => array(
-// 							'type'     => 'css',
-// 							'selector' => '.fl-post-feed-post, .fl-post-grid-post',
-// 						),
-// 					),
-// 				),
-// 			),
-// 			'text_style'      => array(
-// 				'title'  => __( 'Text', 'fl-builder' ),
-// 				'fields' => array(
-// 					'title_color'        => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Title Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'     => 'css',
-// 							'selector' => '.fl-post-feed-title a, .fl-post-grid-title a',
-// 							'property' => 'color',
-// 						),
-// 					),
-// 					'title_typography'   => array(
-// 						'type'       => 'typography',
-// 						'label'      => __( 'Title Typography', 'fl-builder' ),
-// 						'responsive' => true,
-// 						'preview'    => array(
-// 							'type'      => 'css',
-// 							'selector'  => '.fl-post-feed-title, .fl-post-grid-title',
-// 							'important' => true,
-// 						),
-// 					),
-// 					'info_color'         => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Post Info Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'      => 'css',
-// 							'selector'  => '{node} .fl-post-feed .fl-post-feed-header .fl-post-feed-meta, {node} .fl-post-feed .fl-post-feed-header .fl-post-feed-meta span, {node} .fl-post-feed .fl-post-feed-header .fl-post-feed-meta a, {node} .fl-post-feed .fl-post-feed-header .fl-post-feed-meta-terms span, {node} .fl-post-feed .fl-post-feed-header .fl-post-feed-meta-terms a, {node} .fl-post-grid-meta, {node} .fl-post-grid-meta span, {node} .fl-post-grid-meta a, {node} .fl-post-grid-meta-terms span, {node} .fl-post-grid-meta-terms a',
-// 							'property'  => 'color',
-// 							'important' => true,
-// 						),
-// 					),
-// 					'info_typography'    => array(
-// 						'type'       => 'typography',
-// 						'label'      => __( 'Post Info Typography', 'fl-builder' ),
-// 						'responsive' => true,
-// 						'preview'    => array(
-// 							'type'      => 'css',
-// 							'selector'  => '.fl-post-feed-meta, .fl-post-feed-meta a, .fl-post-grid-meta, .fl-post-grid-meta a',
-// 							'important' => true,
-// 						),
-// 					),
-// 					'content_color'      => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Content Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'      => 'css',
-// 							'selector'  => '{node} .fl-post-feed-content, {node} .fl-post-feed-content p, {node} .fl-post-feed-content a, {node} .fl-post-grid-content, {node} .fl-post-grid-content p, {node} .fl-post-grid-content a, {node} .fl-builder-pagination ul.page-numbers li span, {node} .fl-builder-pagination ul.page-numbers li a',
-// 							'property'  => 'color',
-// 							'important' => true,
-// 						),
-// 					),
-// 					'content_typography' => array(
-// 						'type'       => 'typography',
-// 						'label'      => __( 'Content Typography', 'fl-builder' ),
-// 						'responsive' => true,
-// 						'preview'    => array(
-// 							'type'      => 'css',
-// 							'selector'  => '.fl-post-feed-content, .fl-post-feed-content p, .fl-post-grid-content, .fl-post-grid-content p',
-// 							'important' => true,
-// 						),
-// 					),
-// 					'link_color'         => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Link Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'     => 'css',
-// 							'selector' => '.fl-post-feed-content a, .fl-post-grid-content a',
-// 							'property' => 'color',
-// 						),
-// 					),
-// 					'link_hover_color'   => array(
-// 						'type'        => 'color',
-// 						'connections' => array( 'color' ),
-// 						'label'       => __( 'Link Hover Color', 'fl-builder' ),
-// 						'show_reset'  => true,
-// 						'show_alpha'  => true,
-// 						'preview'     => array(
-// 							'type'     => 'css',
-// 							'selector' => '.fl-post-feed-content a:hover, .fl-post-grid-content a:hover',
-// 							'property' => 'color',
-// 						),
-// 					),
-// 				),
-// 			),
-// 
-// 
-// 		),
-// 	),
 
 ));

@@ -46,7 +46,9 @@ if ( $module->get_photos() ) :
 
 		?>
 
+		<?php if ( 'lightbox' == $module->settings->link_photos ) { ?>
 			<a class="fl-post-gallery-link" href="<?php echo($image); ?>" title="<? echo($title);?>">
+		<?php } ?>
 
 				<?php
 
@@ -76,7 +78,11 @@ if ( $module->get_photos() ) :
 
 					</div>
 				</div>
+				
+		<?php if ( 'lightbox' == $module->settings->link_photos ) { ?>
 			</a>
+		<?php } ?>
+			
 			
 		<?php
 		}
